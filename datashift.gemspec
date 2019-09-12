@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'rails', '>= 4.2', '< 6.0'
 
-  s.add_runtime_dependency 'paperclip', '~> 4'
+  s.add_runtime_dependency 'paperclip', '>= 4'
   s.add_runtime_dependency 'spreadsheet', '~> 1.1'
   s.add_runtime_dependency 'rubyzip', '~> 1.2'
   s.add_runtime_dependency 'thread_safe', '~> 0.3', '>= 0.3'
