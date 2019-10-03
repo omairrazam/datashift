@@ -41,8 +41,7 @@ module DataShift
     #     :sheet_number : Select the sheet by index - sheet_name takes precedence
     #
     def open_excel( file_name, options = {})
-
-      @excel = DataShift::Excel.new
+      @excel = @excel||DataShift::Excel.new
 
       @excel.open(file_name)
 

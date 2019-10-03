@@ -55,9 +55,7 @@ module DataShift
     # population messages for specific Method bindings
 
     def prepare_and_assign_method_binding(method_binding, record, data)
-
       prepare_data(method_binding, data)
-
       assign(method_binding, record)
     end
 
@@ -118,8 +116,7 @@ module DataShift
                    end
         else
           @value = data.to_s
-
-          @attribute_hash = @value.slice!( Populator.attribute_hash_const_regexp )
+          @attribute_hash = @value.slice( Populator.attribute_hash_const_regexp )
 
           if attribute_hash && !attribute_hash.empty?
             @attribute_hash = Populator.string_to_hash( attribute_hash )
@@ -203,7 +200,6 @@ module DataShift
     end
 
     def assignment(record, value, model_method)
-
       operator = model_method.operator
       connection_adapter_column = model_method.connection_adapter_column
 
